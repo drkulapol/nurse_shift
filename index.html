@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>จัดตารางเวรพยาบาล</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="top">
+  <div class="brand"><span class="mark" aria-hidden="true"></span><div><h1>ตารางเวรพยาบาล</h1><p class="sub">จัดเวรอัตโนมัติ แก้ไขเองได้ และสรุปจำนวนเวรรายคน</p></div></div>
+  <div class="month"><button id="prev" aria-label="เดือนก่อน">‹</button><strong id="mlabel"></strong><button id="next" aria-label="เดือนถัดไป">›</button></div>
+</header>
+<div class="stripe" aria-hidden="true"><i></i><i></i><i></i></div>
+<nav class="tabs" role="tablist">
+  <button role="tab" data-tab="setup">ตั้งค่าเวรและวันหยุด</button>
+  <button role="tab" data-tab="staff">เจ้าหน้าที่และวันขอหยุด</button>
+  <button role="tab" data-tab="sched">ตารางเวร</button>
+  <button role="tab" data-tab="sum">สรุปจำนวนเวร</button>
+</nav>
+<main id="view"></main>
+<div id="pop" class="pop" hidden></div>
+<div id="toast" role="status" aria-live="polite"></div>
+
+<script src="app.js"></script>
+</body>
+</html>
